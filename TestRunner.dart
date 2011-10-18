@@ -56,14 +56,17 @@ class TestRunner {
       tests.forEach((message,test) {
         cnt++;
         try {
+          // Run
           if (_setUp != null) _setUp();
           test();
           print(message + ' : Green!');
         } catch (ExpectException e) {
+          // Failure
           print(message + ' : Red!');
           print('  ' + e);
           failures++;
         } catch (Exception e) {
+          // Error
           print(message + ' : Error!');
           print('  ' + e);
           errors++;
@@ -71,6 +74,7 @@ class TestRunner {
           if (_tearDown != null) _tearDown();
         }
       });
+      // Print results
       print('Tests run: ${cnt}, Failures ${failures}, Errors: ${errors}');
     })();
 }
