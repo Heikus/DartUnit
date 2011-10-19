@@ -75,6 +75,6 @@ class TestRunner {
         }
       });
       // Print results
-      print('Tests run: ${cnt}, Failures ${failures}, Errors: ${errors}');
+      print('Tests run: ${cnt}, Failures: ${failures}, Errors: ${errors}');
     })();
 }
