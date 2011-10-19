@@ -59,16 +59,16 @@ class TestRunner {
           // Run
           if (_setUp != null) _setUp();
           test();
-          print(message + ' : Green!');
+          print('${message} : Green!');
         } catch (ExpectException e) {
           // Failure
-          print(message + ' : Red!');
-          print('  ' + e);
+          print('${message} : Red!');
+          print('  ${e}');
           failures++;
         } catch (Exception e) {
           // Error
-          print(message + ' : Error!');
-          print('  ' + e);
+          print('${message} : Error!');
+          print('  ${e}');
           errors++;
         } finally {
           if (_tearDown != null) _tearDown();
