@@ -35,12 +35,11 @@ class TestRunner {
   Map<String, Function> tests;
 
   // Constructor
-  TestRunner() =>
-    ((){
-      _setUp = null;
-      _tearDown = null;
-      tests = new LinkedHashMap<String, Function>();
-    })();
+  TestRunner() {
+    _setUp = null;
+    _tearDown = null;
+    tests = new LinkedHashMap<String, Function>();
+  }
 
   // Add Test Case
   add(message, test) =>
